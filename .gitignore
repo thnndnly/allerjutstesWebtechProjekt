@@ -27,4 +27,8 @@ replay_pid*
 .gradle
 **/build/
 
+### H2 ###
+*.mv.db
+*.trace.db
+
 
