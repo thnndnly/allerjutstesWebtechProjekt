@@ -1,11 +1,28 @@
 package com.example.potcontroll.data;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 import java.util.Date;
 
 /**
  * PokerGameEntry
  */
+@Entity
 public class PokerGameEntry {
+
+    @Id
+    private Long id;
+
+    public PokerGameEntry() {}
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
+    }
 
     /**
      *  Gametype enthält den Spieltypen, der gespielt wurde.
@@ -20,16 +37,16 @@ public class PokerGameEntry {
         SPINANDGO,
     }
 
-    private final Gametype gametype;
+    private Gametype gametype;
 
-    private final int sb;
-    private final int bb;
-    private final int ante;
+    private int sb;
+    private int bb;
+    private int ante;
 
-    private final Date date;
+    private Date date;
 
-    private final int buyIn;
-    private final int cashOut;
+    private int buyIn;
+    private int cashOut;
 
     public PokerGameEntry(Gametype gametype, int sb, int bb, int ante, Date date, int buyIn, int cashOut) {
         this.gametype = gametype;
