@@ -1,5 +1,6 @@
 # allerjutstesWebtechProjekt
-
+#Beteiligt:
+Dimitri Tsakos, Jan Schmutz 
 #Beschreibun:
 Poker Tracker (Statistic)
 
@@ -20,6 +21,6 @@ Atribute:
 -Buy in 
 -Cashflow / Lost 
 
-Benutzerverwaltung:
+Benutzerverwaltung:#
 
 
