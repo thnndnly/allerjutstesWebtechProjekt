@@ -1,26 +1,26 @@
 # allerjutstesWebtechProjekt
 #Beteiligt:
 Dimitri Tsakos, Jan Schmutz 
-#Beschreibun:
+#Beschreibung:
 Poker Tracker (Statistic)
+<br>Card Combat Poker
 
-Funktionen:
+### Funktionen:
 1. Statistic anzeigen lassen 
 2. Spieldaten Hinzufügen, und ausgeben lassen 
 3. (Optional) Satistic zu gespielten Händen 
 
-Optionen & Funktionen:
+### Optionen & Funktionen:
 - Benutzer
 - Name
 - Login
-- liste mit gespielten Partien 
+- Liste mit gespielten Partien 
 
-Atribute:
+### Atributes:
 -Type
 -SB/BB
 -Buy in 
 -Cashflow / Lost 
 
-Benutzerverwaltung:#
 
 
