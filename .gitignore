@@ -24,7 +24,7 @@ hs_err_pid*
 replay_pid*
 
 # Hinzugefügt von Dimi
-.gradle
+*.gradle
 **/build/
 
 ### H2 ###
