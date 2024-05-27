@@ -26,6 +26,8 @@ replay_pid*
 # Hinzugefügt von Dimi
 *.gradle
 **/build/
+.idea
+
 
 ### H2 ###
 *.mv.db
