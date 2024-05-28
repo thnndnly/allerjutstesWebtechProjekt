@@ -1,3 +1,4 @@
+/*
 package com.example.potcontroll.data;
 
 import jakarta.persistence.Entity;
@@ -5,9 +6,6 @@ import jakarta.persistence.Id;
 
 import java.util.Date;
 
-/**
- * PokerGameEntry
- */
 @Entity
 public class PokerGameEntry {
 
@@ -24,13 +22,13 @@ public class PokerGameEntry {
         return id;
     }
 
-    /**
+
      *  Gametype enthält den Spieltypen, der gespielt wurde.
      *  Bis jetzt:
      *  0 - Cashgame
      *  1 - Tournament
      *  2 - Spin and Go
-     */
+
     public enum Gametype {
         CASHGAME,
         TOURNAMENT,
@@ -86,3 +84,4 @@ public class PokerGameEntry {
         return cashOut;
     }
 }
+*/

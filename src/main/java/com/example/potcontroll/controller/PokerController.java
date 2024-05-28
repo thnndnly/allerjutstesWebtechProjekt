@@ -1,3 +1,4 @@
+/*
 package com.example.potcontroll.controller;
 
 import com.example.potcontroll.data.PokerGameEntry;
@@ -44,3 +45,4 @@ public class PokerController {
         return service.get(entryId);
     }
 }
+*/

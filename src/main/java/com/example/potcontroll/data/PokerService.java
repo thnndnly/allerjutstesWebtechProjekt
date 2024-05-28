@@ -1,3 +1,4 @@
+/*
 package com.example.potcontroll.data;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,3 +18,4 @@ public class PokerService {
         return repo.findById(id).orElseThrow(RuntimeException::new);
     }
 }
+*/
