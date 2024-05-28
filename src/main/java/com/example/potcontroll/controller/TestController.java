@@ -2,6 +2,7 @@ package com.example.potcontroll.controller;
 
 import com.example.potcontroll.data.TestEntry;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,6 +21,7 @@ public class TestController {
         );
     }
 
+    @CrossOrigin
     @GetMapping(path= "/api/testEntryList")
     public ResponseEntity<List<TestEntry>> getTestEntryList() {
         return ResponseEntity.ok(testEntryList);
