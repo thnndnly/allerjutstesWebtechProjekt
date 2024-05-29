@@ -12,8 +12,9 @@ public class PokerService {
     @Autowired
     PokerRepository repo;
 
-    public PokerGameEntry save(PokerGameEntry entry) {
-        return repo.save(entry);
+    public List<PokerGameEntry> save(PokerGameEntry entry) {
+        repo.save(entry);
+        return (List<PokerGameEntry>) repo.findAll();
     }
 
     public PokerGameEntry get(Long id) {
