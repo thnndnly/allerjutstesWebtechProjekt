@@ -33,4 +33,4 @@ replay_pid*
 *.mv.db
 *.trace.db
 
-
+.gradle/
