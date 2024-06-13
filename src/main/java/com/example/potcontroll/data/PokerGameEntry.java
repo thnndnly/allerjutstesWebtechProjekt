@@ -51,6 +51,7 @@ public class PokerGameEntry {
         this.date = date;
         this.buyIn = buyIn;
         this.cashOut = cashOut;
+        this.owner = owner;
     }
 
     public void setId(Long id) {

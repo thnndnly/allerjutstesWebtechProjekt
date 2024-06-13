@@ -21,6 +21,10 @@ public class PokerService {
         return repo.findById(id).orElseThrow(RuntimeException::new);
     }
 
+    public void delete(Long id) {
+        repo.deleteById(id);
+    }
+
     public List<PokerGameEntry> getAllWithoutOwner() {
         Iterable<PokerGameEntry> iterator = repo.findAll();
         List<PokerGameEntry> pokerGameEntryList = new ArrayList<PokerGameEntry>();

@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 
 
@@ -22,6 +23,15 @@ public class PokerController {
     @PostMapping("/pokerGameEntries")
     public List<PokerGameEntry> createPokerGameEntry(@RequestBody PokerGameEntry entry) {
         return service.save(entry);
+    }
+
+    @CrossOrigin
+    @DeleteMapping("/pokerGameEntries/{id}")
+    public List<PokerGameEntry> deletePokerGameEntry(@PathVariable String id) {
+        logger.info("Deleting entry with id: {}", id);
+        Long entryId = Long.parseLong(id);
+        service.delete(entryId);
+        return service.getAllWithoutOwner();
     }
 
     @CrossOrigin
