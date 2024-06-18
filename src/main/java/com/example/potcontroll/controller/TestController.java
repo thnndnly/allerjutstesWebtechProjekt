@@ -1,9 +1,11 @@
 package com.example.potcontroll.controller;
 
 import com.example.potcontroll.data.TestEntry;
+import jakarta.persistence.PostLoad;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;

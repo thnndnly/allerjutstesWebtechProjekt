@@ -34,7 +34,7 @@ public class PokerGameEntry {
     private int bb;
     private int ante;
 
-    private Date date;
+    private String date;
 
     private int buyIn;
     private int cashOut;
@@ -43,7 +43,7 @@ public class PokerGameEntry {
 
     public PokerGameEntry() {}
 
-    public PokerGameEntry(Gametype gametype, int sb, int bb, int ante, Date date, int buyIn, int cashOut, String owner) {
+    public PokerGameEntry(Gametype gametype, int sb, int bb, int ante, String date, int buyIn, int cashOut, String owner) {
         this.gametype = gametype;
         this.sb = sb;
         this.bb = bb;
@@ -78,7 +78,7 @@ public class PokerGameEntry {
         return ante;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
