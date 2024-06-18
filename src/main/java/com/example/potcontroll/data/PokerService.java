@@ -29,7 +29,7 @@ public class PokerService {
         Iterable<PokerGameEntry> iterator = repo.findAll();
         List<PokerGameEntry> pokerGameEntryList = new ArrayList<PokerGameEntry>();
         for(PokerGameEntry entry : iterator) {
-            if(entry.getOwner().isEmpty() || entry.getOwner() == null) {
+            if(entry.getOwner() == null || entry.getOwner().isEmpty()) {
                 pokerGameEntryList.add(entry);
             }
         }
@@ -40,8 +40,10 @@ public class PokerService {
         Iterable<PokerGameEntry> iterator = repo.findAll();
         List<PokerGameEntry> pokerGameEntryList = new ArrayList<PokerGameEntry>();
         for(PokerGameEntry entry : iterator) {
-            if(entry.getOwner() != null || entry.getOwner().equals(owner)) {
-                pokerGameEntryList.add(entry);
+            if(entry.getOwner() != null) {
+                if(entry.getOwner().equals(owner)) {
+                    pokerGameEntryList.add(entry);
+                }
             }
         }
         return pokerGameEntryList;
