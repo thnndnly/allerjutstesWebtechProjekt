@@ -21,6 +21,9 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	implementation "org.postgresql:postgresql:42.6.0"
+
+	// spring security - 1 : 1 kopiert aus dem BucksBuddy Backend
+	implementation 'org.springframework.security:spring-security-crypto'
 }
 
 tasks.named('test') {
