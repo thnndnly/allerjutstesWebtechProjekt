@@ -13,6 +13,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * UserController is a REST controller that handles user-related operations.
+ *
+ * Alle Docs generiert mit GitHub Copilot
+ */
 @RestController
 public class UserController {
 
@@ -24,6 +29,12 @@ public class UserController {
 
     Logger logger = LoggerFactory.getLogger(UserController.class);
 
+    /**
+     * Registers a new user.
+     *
+     * @param user The user to be registered.
+     * @return A ResponseEntity with the username if successful, or an error message if not.
+     */
     @CrossOrigin
     @PostMapping("/register")
     public ResponseEntity<String> registerUser(@RequestBody User user) {
@@ -40,6 +51,12 @@ public class UserController {
         return new ResponseEntity<>(user.getUsername(), org.springframework.http.HttpStatus.OK);
     }
 
+    /**
+     * Logs in a user.
+     *
+     * @param user The user to be logged in.
+     * @return A ResponseEntity with the username if successful, or an error message if not.
+     */
     @CrossOrigin
     @PostMapping("/login")
     public ResponseEntity<String> loginUser(@RequestBody User user) {
@@ -57,6 +74,12 @@ public class UserController {
         return new ResponseEntity<>("User not found", HttpStatus.BAD_REQUEST);
     }
 
+    /**
+     * Deletes a user.
+     *
+     * @param username The username of the user to be deleted.
+     * @return A ResponseEntity with the username if successful, or an error message if not.
+     */
     @CrossOrigin
     @DeleteMapping("/user/{username}")
     public ResponseEntity<String> deleteUser(@PathVariable String username) {
