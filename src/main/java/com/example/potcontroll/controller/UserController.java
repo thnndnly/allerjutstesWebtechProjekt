@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -18,10 +19,8 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    /*
     @Autowired
     private PasswordEncoder passwordEncoder;
-     */
 
     Logger logger = LoggerFactory.getLogger(UserController.class);
 
@@ -35,7 +34,7 @@ public class UserController {
                 return new ResponseEntity<>("User already exists", HttpStatus.BAD_REQUEST);
             }
         }
-        // user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
         userService.save(user);
         logger.info("User registered: {}", user.getUsername());
         return new ResponseEntity<>(user.getUsername(), org.springframework.http.HttpStatus.OK);
@@ -48,7 +47,7 @@ public class UserController {
         List<User> allreadyRegisteredUsers = userService.getAll();
         for(User registeredUser : allreadyRegisteredUsers) {
             if(registeredUser.getUsername().equals(user.getUsername())) {
-                if(registeredUser.getPassword().equals(user.getPassword())) {
+                if(passwordEncoder.matches(user.getPassword(), registeredUser.getPassword())){
                     logger.info("User logged in: {}", user.getUsername());
                     return new ResponseEntity<>(user.getUsername(), org.springframework.http.HttpStatus.OK);
                 }
